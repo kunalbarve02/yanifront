@@ -65,7 +65,7 @@ function Shop({ isEdit }) {
         .catch(err => {
             console.log(err)
         })
-        axios.get('https://yaniback.herokuapp.com/categories')
+        axios.get('https://yaniback.herokuapp.com/api/categories')
         .then(res => {
             const cat = res.data.map(cat => {
                 cat.checked = false
