@@ -1,0 +1,40 @@
+.contact-container
+{
+    height: 44px;
+    width: 100%;
+    padding:0px 35px;
+    display: flex;
+}
+.contact-left
+{
+    width: 28%;
+}
+.contact-right
+{
+    width: 40%;
+}
+.contact
+{
+    width: fit-content;
+    border-left: 1px solid #EBEBEB;
+    border-right: 1px solid #EBEBEB;
+    text-align: center;
+    cursor: pointer;
+}
+.contact-icon
+{
+    margin-bottom: 2px;
+}
+.contact-icon:hover
+{
+    opacity: 0.85;
+}
+
+@media screen and (max-width: 768px)
+{
+    .contact-container
+    {
+        display: none;
+    }
+    
+}

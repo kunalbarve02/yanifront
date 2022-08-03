@@ -1,0 +1,11 @@
+.signup-container
+{
+    user-select:none;
+    margin-top: 5%;
+}
+
+.signup-header
+{
+    color: #F7A79E;
+    font-size: 60px;
+}
