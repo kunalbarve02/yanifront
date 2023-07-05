@@ -31,7 +31,7 @@ function Signup() {
         e.preventDefault()
         console.log(userData)
         const { name, lastname,email, password, address1, address2, city, zip } = userData
-        axios.post( "https://yaniback.herokuapp.com/api/signup" , { name,lastname,email, password,address:address1+" "+address2+" "+city+" "+zip } )
+        axios.post( "https://yaniback.onrender.com/api/signup" , { name,lastname,email, password,address:address1+" "+address2+" "+city+" "+zip } )
             .then((res)=>{
                 console.log(res)
                 setIsAlert({

@@ -15,7 +15,7 @@ const EditProduct = (props) => {
 
     useEffect(() => {
         document.title = 'Edit Product';
-        axios.get('https://yaniback.herokuapp.com/api/categories')
+        axios.get('https://yaniback.onrender.com/api/categories')
         .then(res => {
         console.log(res.data)
         setCategories(res.data);
@@ -44,7 +44,7 @@ const EditProduct = (props) => {
         productForm.append('stock', product.stock);
         productForm.append('image', product.image);
     
-        axios.put(`https://yaniback.herokuapp.com/api/product/${product._id}/${state.user.id}`, productForm,{
+        axios.put(`https://yaniback.onrender.com/api/product/${product._id}/${state.user.id}`, productForm,{
           headers: {
             'Content-Type': 'multipart/form-data',
             Authorization: `Bearer ${state.user.token}`

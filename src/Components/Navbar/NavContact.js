@@ -15,7 +15,7 @@ function NavContact() {
         user.dispatch({
             type:'LOGOUT'
         })
-        axios.get('https://yaniback.herokuapp.com/api/signout')
+        axios.get('https://yaniback.onrender.com/api/signout')
         .then((res)=>{
             console.log(res.data)
         })

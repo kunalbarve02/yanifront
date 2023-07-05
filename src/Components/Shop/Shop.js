@@ -29,7 +29,7 @@ function Shop({ isEdit }) {
 
     const callFilterApi = () => {
         console.table(filter)
-        axios.get('https://yaniback.herokuapp.com/api/products/filter', {
+        axios.get('https://yaniback.onrender.com/api/products/filter', {
             params: {
                 filter: filter
             }})
@@ -58,14 +58,14 @@ function Shop({ isEdit }) {
     useEffect(() => {
 
         document.title = 'Shop'
-        axios.get('https://yaniback.herokuapp.com/api/products')
+        axios.get('https://yaniback.onrender.com/api/products')
         .then(res => {
             setProducts(res.data)
         })
         .catch(err => {
             console.log(err)
         })
-        axios.get('https://yaniback.herokuapp.com/api/categories')
+        axios.get('https://yaniback.onrender.com/api/categories')
         .then(res => {
             const cat = res.data.map(cat => {
                 cat.checked = false

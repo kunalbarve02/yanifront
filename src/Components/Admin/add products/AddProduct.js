@@ -14,7 +14,7 @@ function AddProduct() {
 
   useEffect(() => {
     document.title = 'Add Product';
-    axios.get('https://yaniback.herokuapp.com/api/categories')
+    axios.get('https://yaniback.onrender.com/api/categories')
     .then(res => {
       console.log(res.data)
       setCategories(res.data);
@@ -43,7 +43,7 @@ function AddProduct() {
     productForm.append('stock', product.stock);
     productForm.append('image', product.image);
 
-    axios.post(`https://yaniback.herokuapp.com/api/product/create/${state.user.id}`, productForm,{
+    axios.post(`https://yaniback.onrender.com/api/product/create/${state.user.id}`, productForm,{
       headers: {
         'Content-Type': 'multipart/form-data',
         Authorization: `Bearer ${state.user.token}`

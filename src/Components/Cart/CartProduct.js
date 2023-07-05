@@ -15,7 +15,7 @@ function CartProduct({ product, quantity, setCart, cart, index, isAdmin }) {
     setQuantityState(quantityState + 1)
     cart[index].quantity = quantityState + 1;
     setCart([...cart]);
-    axios.put('https://yaniback.herokuapp.com/api/cart/updateQuantity',{
+    axios.put('https://yaniback.onrender.com/api/cart/updateQuantity',{
       productId: product._id,
       quantity: quantityState+1
     },
@@ -33,7 +33,7 @@ function CartProduct({ product, quantity, setCart, cart, index, isAdmin }) {
     setQuantityState(quantityState - 1);
     cart[index].quantity = quantityState - 1;
     setCart([...cart]);
-    axios.put('https://yaniback.herokuapp.com/api/cart/updateQuantity',{
+    axios.put('https://yaniback.onrender.com/api/cart/updateQuantity',{
       productId: product.id,
       quantity: quantityState-1
     },{
@@ -52,7 +52,7 @@ function CartProduct({ product, quantity, setCart, cart, index, isAdmin }) {
     cart[index].quantity = parseInt(e.target.value);
     setCart([...cart]);
     console.log(cart);
-    axios.put('https://yaniback.herokuapp.com/api/cart/updateQuantity',{
+    axios.put('https://yaniback.onrender.com/api/cart/updateQuantity',{
       productId: product._id,
       quantity: parseInt(e.target.value)
     },
@@ -65,7 +65,7 @@ function CartProduct({ product, quantity, setCart, cart, index, isAdmin }) {
   
   const handleDeleteProd = (e) => {
     e.preventDefault();
-    axios.put('https://yaniback.herokuapp.com/api/cart/delete',{
+    axios.put('https://yaniback.onrender.com/api/cart/delete',{
       productId: product._id
     },
     {

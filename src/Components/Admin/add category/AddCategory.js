@@ -15,7 +15,7 @@ function AddCategory()
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post(`https://yaniback.herokuapp.com/api/category/create/${state.user.id}`, {
+        axios.post(`https://yaniback.onrender.com/api/category/create/${state.user.id}`, {
             name: category
         },
         {

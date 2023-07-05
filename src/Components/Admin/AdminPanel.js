@@ -19,7 +19,7 @@ function AdminPanel()
     const [show, setShow] = useState(false);
 
     useEffect(() => {
-        state.user.token!==""?axios.get(`https://yaniback.herokuapp.com/api/order/all/${state.user.id}`,{
+        state.user.token!==""?axios.get(`https://yaniback.onrender.com/api/order/all/${state.user.id}`,{
             headers: {
                 Authorization: `Bearer ${state.user.token}`
             }         

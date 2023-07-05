@@ -20,7 +20,7 @@ function ProductPage() {
     const [ isincart, setIsincart ] = useState(false);
 
     useEffect(() => {
-        axios.get(`https://yaniback.herokuapp.com/api/product/${productId}`)
+        axios.get(`https://yaniback.onrender.com/api/product/${productId}`)
         .then(res=>{
             setProduct(res.data)
             console.log(user.state.user.cart)
@@ -41,7 +41,7 @@ function ProductPage() {
     console.log(quantity)
 
     const handleAddtoCart=()=>{
-        axios.post('https://yaniback.herokuapp.com/api/cart/add', {
+        axios.post('https://yaniback.onrender.com/api/cart/add', {
         productId: product._id,
         quantity: 1
         },

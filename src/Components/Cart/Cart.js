@@ -19,7 +19,7 @@ function Cart() {
 
   useEffect(() => {
     console.log(user.state.user.token);
-    user.state.user.token!="" ? axios.get('https://yaniback.herokuapp.com/api/cart/get',
+    user.state.user.token!="" ? axios.get('https://yaniback.onrender.com/api/cart/get',
     {
       headers: {
         Authorization: 'Bearer ' + user.state.user.token
@@ -65,7 +65,7 @@ function Cart() {
         quantity: product.quantity
       }
     })
-    axios.post(`https://yaniback.herokuapp.com/api/order/create/${user.state.user.id}`,
+    axios.post(`https://yaniback.onrender.com/api/order/create/${user.state.user.id}`,
     {
       order:{
         products: products,
@@ -95,7 +95,7 @@ function Cart() {
           console.log("display Response",response);
           setCart([]);
           user.dispatch({type:'EMPTY_CART'});
-          axios.put(`https://yaniback.herokuapp.com/api/order/updateTransactionId/${user.state.user.id}`,{
+          axios.put(`https://yaniback.onrender.com/api/order/updateTransactionId/${user.state.user.id}`,{
             orderId: res.data.order._id,
             paymentId: response.razorpay_payment_id
           },
@@ -135,7 +135,7 @@ function Cart() {
     })
     if(paymentMethod !== ""){
     if(paymentMethod === "Cash on Delivery"){
-    axios.post(`https://yaniback.herokuapp.com/api/order/create/${user.state.user.id}`,
+    axios.post(`https://yaniback.onrender.com/api/order/create/${user.state.user.id}`,
     {
       order:{
         products: products,

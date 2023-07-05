@@ -29,7 +29,7 @@ function ProdCard(props) {
     const [product, setProduct] = useState(props.product)
 
     const handleAddtoCart=()=>{
-        axios.post('https://yaniback.herokuapp.com/api/cart/add', {
+        axios.post('https://yaniback.onrender.com/api/cart/add', {
         productId: product._id,
         quantity: 1
         },

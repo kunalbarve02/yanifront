@@ -18,7 +18,7 @@ function EditCategories(props)
     const [selectedCategory, setSelectedCategory] = useState();
 
     useEffect(() => {
-        axios.get(`https://yaniback.herokuapp.com/api/categories`)
+        axios.get(`https://yaniback.onrender.com/api/categories`)
         .then(res => {
             console.log(res.data)
             setCategories(res.data);
@@ -58,7 +58,7 @@ function EditCategories(props)
             return;
         }
         console.log(categoryName);
-        axios.put(`https://yaniback.herokuapp.com/api/category/${selectedCategory._id}/${state.user.id}`, {name: categoryName},
+        axios.put(`https://yaniback.onrender.com/api/category/${selectedCategory._id}/${state.user.id}`, {name: categoryName},
         {
             headers: {
                 Authorization: `Bearer ${state.user.token}`

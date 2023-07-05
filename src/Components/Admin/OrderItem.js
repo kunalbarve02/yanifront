@@ -16,7 +16,7 @@ function OrderItem(props) {
 
         setOrderStatus(e);
 
-        axios.put(`https://yaniback.herokuapp.com/api/order/${order.id}/status/${state.user.id}`, {
+        axios.put(`https://yaniback.onrender.com/api/order/${order.id}/status/${state.user.id}`, {
             status: e,
             oderId: order._id
         },{
